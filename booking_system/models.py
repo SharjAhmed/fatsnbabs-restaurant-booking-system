@@ -29,7 +29,7 @@ class Table(models.Model):
         return f'Table #{self.id}, for {self.number_of_seats} people'
 
 
-class Booking(models.Model):
+class Reservation(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='restaurant_booking')
     table = models.ForeignKey(Table, on_delete=models.CASCADE)
     date = models.DateTimeField(null=False, blank=False)
