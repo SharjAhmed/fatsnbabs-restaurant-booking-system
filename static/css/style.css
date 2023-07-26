@@ -1,0 +1,81 @@
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 6.5rem;
+}
+
+.blue-text {
+    color: #23BBBB;
+    font-weight: bolder;
+}
+
+.btn-blue {
+    background-color: #23BBBB;
+    color: #fff;
+}
+
+/* Navbar */
+
+.navbar {
+    padding: 2%;
+    font-size: large;
+}
+
+/* Main Page */
+
+.background {
+    background: url(https://res.cloudinary.com/dhfp7asfd/image/upload/e_blur:100,o_48/v1690410296/desi_afternoon_tea_hgzfl8.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 750px;
+}
+
+.snippet {
+    margin-top: 10%;
+    margin-left: 3%;
+    color: #fff;
+    text-align: center;
+    font-size: 325%;
+    width: 30%;
+    height: auto;
+    padding: 1rem;
+    background-color: rgba(58, 58, 58, .7);
+    position: absolute;
+    justify-content: center;
+}
+
+/* Carousel */
+
+.carousel-items {
+    height: 700px;
+}
+
+
+
+.carousel {
+    height: 350px;
+    top: 25%;
+    width: 90%;
+    max-width: 650px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+
+
+}
+
+.carousel-inner {
+    position: absolute;
+    top: 25%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 6.5rem;
+}

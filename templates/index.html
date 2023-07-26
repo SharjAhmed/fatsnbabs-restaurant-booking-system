@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section>
+    <div class="row background">
+        <div class="col">
+            <div>
+                <h1 class="snippet">
+                    Fats<span class="blue-text"> n </span>Babs
+                    <hr>
+                    Bringing you afternoon tea with a <span class="blue-text">Pakistani twist</span>
+                </h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="carousel-items">
+    <div id="carouselExampleIndicators" class="carousel slide bg-dark text-center text-white" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <h3><i class="fa-solid fa-mug-saucer fa-flip" style="color: #23bbbb;"></i> See our menus</h3>
+                <br>
+                <p>Check out our Brunch, Lunch & Afternoon Tea Menus!</p>
+                <br>
+                <a class="btn btn-blue" href="#">Menu</a>
+            </div>
+            <div class="carousel-item">
+                {% if user.is_authenticated %}
+                <h3><i class="fa-regular fa-calendar-days fa-spin" style="color: #23bbbb;"></i> Book a table!</h3>#
+                <br>
+                <a class="btn btn-blue" href="#">Book a table</a>
+                <br>
+                {% else %}
+                <h3><i class="fa-regular fa-calendar-days fa-spin" style="color: #23bbbb;"></i> Book a table!</h3>
+                <br>
+                <p>Sign up and book a table with us</p>
+                <br>
+                <a class="btn btn-blue" href="#">Sign in</a>
+                {% endif %}
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</section>
+
+{% endblock %}
