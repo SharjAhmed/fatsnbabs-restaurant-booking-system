@@ -32,16 +32,18 @@
             </div>
             <div class="carousel-item">
                 {% if user.is_authenticated %}
-                <h3><i class="fa-regular fa-calendar-days fa-spin" style="color: #23bbbb;"></i> Book a table!</h3>#
+                <h3><i class="fa-regular fa-calendar-days fa-spin" style="color: #23bbbb;"></i> Book a table!</h3>
                 <br>
-                <a class="btn btn-blue" href="#">Book a table</a>
+                <p>Come join us for sweets and savouries!</p>
+                <br>
+                <a class="btn btn-blue" href="{% url 'booking' %}">Book a table</a>
                 <br>
                 {% else %}
                 <h3><i class="fa-regular fa-calendar-days fa-spin" style="color: #23bbbb;"></i> Book a table!</h3>
                 <br>
                 <p>Sign up and book a table with us</p>
                 <br>
-                <a class="btn btn-blue" href="#">Sign in</a>
+                <a class="btn btn-blue" href="{% url 'account_login' %}">Login</a>
                 {% endif %}
             </div>
         </div>

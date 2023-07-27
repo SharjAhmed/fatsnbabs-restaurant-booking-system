@@ -30,7 +30,7 @@ class Table(models.Model):
 
 
 class Reservation(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='restaurant_booking')
+    client = models.ForeignKey(User, on_delete=models.CASCADE, related_name='restaurant_booking')
     table = models.ForeignKey(Table, on_delete=models.CASCADE)
     date = models.DateTimeField(null=False, blank=False)
     time = models.CharField(null=True, blank=False, choices=TIME_CHOICES, max_length=25)

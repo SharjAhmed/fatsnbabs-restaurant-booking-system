@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+<p>This is connected properly, why are you not connected?</p>
+
+{% block content %}
+
+<div class="container">
+  <div class="row mt-5 mb-5">
+    <div class="col">
+      <div class="jumbotron">
+        <h1 class="display-4">{% trans "Sign Up" %}</h1>
+        <p class="lead">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}" class="blue-text">sign in</a>.{% endblocktrans %}</p>
+        <hr class="my-4">
+        <p><form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+          {% csrf_token %}
+          {{ form.as_p }}
+          {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+          {% endif %}
+          <button class="btn btn-blue btn-lg" type="submit">Sign Up</button>
+        </form></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

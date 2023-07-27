@@ -86,11 +86,19 @@
     font-weight: bolder;
 }
 
-.sub-list{
+.sub-list {
     font-weight: 100;
     font-size: smaller;
     padding-top: 0;
 }
+
+/* Card */
+
+.card-body {
+    border-style: solid;
+    border-color: #23BBBB;
+}
+
 
 /* Footer */
 

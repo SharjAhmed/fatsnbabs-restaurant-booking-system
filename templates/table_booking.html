@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Table booking section -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col mt-5 ">
+        <div class="jumbotron">
+          <h3 class="display-4">Book <span class="blue-text">a</span> table</h3>
+          <hr class="my-4">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card mt-4" style="width: 18rem;">
+                <div class="card-body card-height">
+                    <form class='mt-5' method='post' action="booking">
+                      {% csrf_token %}
+                      {{ form.as_p }}
+                      <div>
+                        <p>
+                          <button type="submit" class="btn btn-blue">Add A New Booking</button>
+                        </p>
+                      </div>
+                    </form>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%endblock%}

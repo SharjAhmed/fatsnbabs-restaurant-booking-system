@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, HttpResponse, get_list_or_404, \
     get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Reservation
+from .forms import ReservationForm
 from django.contrib import messages
 from datetime import date
 
@@ -12,10 +13,11 @@ def index_view(request):
 def menu_view(request):
     return render(request, 'menus.html')
 
+
 @login_required
 def add_reservation(request):
 
-    if request.method == 'POST':
+     if request.method == 'POST':
         form = ReservationForm(request.POST)
 
         if form.is_valid():
@@ -23,17 +25,17 @@ def add_reservation(request):
             reserv.client = request.user
             reserv.save()
             messages.success(
-                request, 'Your reservation request has been submitted succesfully.'
+                request, 'Reservation request submitted succesfully.'
                 )
         else:
-            messages.error(request, 'Sorry, that table has already been booked.')
+            messages.error(request, 'The table is already booked.')
             reserv = form.instance.date
 
-    form = ReservationForm()
-    context = {
-        'form': form,
-    }
-    return render(request, 'table_booking.html', context)
+        form = ReservationForm()
+        context = {
+            'form': form,
+        }
+        return render(request, 'table_booking.html', context)
 
 @login_required
 def manage_bookings(request):
