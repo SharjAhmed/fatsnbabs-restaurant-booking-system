@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<br>
+
+<div class="container">
+    <div class="row text-center">
+        <div id="brunch-menu" class="col-sm">
+            <h1 class="blue-text">Brunch Menu</h1>
+            <hr class="blue-text">
+            <hr class="blue-text">
+            <span class="menu-items">
+                <p>All Breakfast Plate</p>
+                <p class="sub-list">Includes:</p>
+                <br>
+                <p>Chana Puri <i class="fa-solid fa-leaf fa-2xs" style="color: #27ae60;"></i></p>
+                <br>
+                <p>Eggs Benedict</p>
+                <br>
+                <p>Halwa</p>
+                <br>
+                <p>Pancakes</p>
+                <p class="sub-list">Chocolate</p>
+                <p class="sub-list">Bananas | Blueberries | Strawberries</p>
+                <p class="sub-list">Honey</p>
+                <p class="sub-list">Lemon & Sugar</p>
+            </span>
+        </div>
+        <div id="lunch-menu" class="col-sm">
+            <h1 class="blue-text">Lunch Menu</h1>
+            <hr class="blue-text">
+            <hr class="blue-text">
+            <div id="carouselExampleIndicators" class="carousel lunch-carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <h3 class="blue-text">Lunch Bites</h3>
+                        <hr class="blue-text">
+                        <span class="menu-items">
+                            <p>Chicken Pakoras</p>
+                            <br>
+                            <p>Kebab Rolls</p>
+                            <br>
+                            <p>Samosa</p>
+                            <p class="sub-list">Meat</p>
+                            <p class="sub-list">Vegetable</p>
+                            <br>
+                            <p>Vegetable Samosa Chaat <i class="fa-solid fa-leaf fa-2xs" style="color: #27ae60;"></i>
+                            </p>
+                        </span>
+                    </div>
+                    <div class="carousel-item">
+                        <h3 class="blue-text">Paninis</h3>
+                        <hr class="blue-text">
+                        <span class="menu-items">
+                            <p>Tandoori Chicken</p>
+                            <br>
+                            <p>Three Cheese</p>
+                            <br>
+                            <p>Tuna Melt</p>
+                        </span>
+                    </div>
+                    <div class="carousel-item">
+                        <h3 class="blue-text">Salads</h3>
+                        <hr class="blue-text">
+                        <span class="menu-items">
+                            <p>Chicken Quinoa Salad</p>
+                            <br>
+                            <p>Mango Salad <i class="fa-solid fa-leaf fa-2xs" style="color: #27ae60;"></i></p>
+                            <br>
+                            <p>Olive & Feta Salad</p>
+                        </span>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div id="afternoon-tea-menu" class="col-sm">
+            <h1 class="blue-text">Afternoon Tea Menu</h1>
+            <hr class="blue-text">
+            <hr class="blue-text">
+            <span class="menu-items">
+                <p>British Cream Tea</p>
+                <p class="sub-list">or</p>
+                <p>Desi Chai</p>
+                <br>
+                <p>A Selection of Scrumptious Savouries</p>
+                <br>
+                <p>A Delicate Array of Desserts</p>
+                <p class="sub-list">Inspired by Pakistani and British Menus</p>
+            </span>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

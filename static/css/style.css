@@ -12,6 +12,7 @@
     font-weight: bolder;
 }
 
+
 .btn-blue {
     background-color: #23BBBB;
     color: #fff;
@@ -31,7 +32,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 750px;
+    min-height: 47rem;
 }
 
 .snippet {
@@ -51,27 +52,47 @@
 /* Carousel */
 
 .carousel-items {
-    height: 700px;
+    height: 44rem;
 }
 
-
-
 .carousel {
-    height: 350px;
+    height: 22rem;
     top: 25%;
     width: 90%;
-    max-width: 650px;
+    max-width: 40rem;
     margin: auto;
     overflow: hidden;
     border-radius: 15px;
+}
 
+.lunch-carousel {
+    top: -120px;
+    height: 30rem;
+}
 
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
 }
 
 .carousel-inner {
     position: absolute;
     top: 25%;
 }
+
+/* Menus */
+
+.menu-items {
+    font-weight: bolder;
+}
+
+.sub-list{
+    font-weight: 100;
+    font-size: smaller;
+    padding-top: 0;
+}
+
+/* Footer */
 
 .footer {
     position: absolute;

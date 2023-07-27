@@ -6,9 +6,11 @@ from django.contrib import messages
 from datetime import date
 
 
-# Create your views here.
 def index_view(request):
     return render(request, 'index.html')
+
+def menu_view(request):
+    return render(request, 'menus.html')
 
 @login_required
 def add_reservation(request):
