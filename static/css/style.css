@@ -12,10 +12,13 @@
     font-weight: bolder;
 }
 
-
 .btn-blue {
     background-color: #23BBBB;
     color: #fff;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Navbar */
@@ -70,11 +73,6 @@
     height: 30rem;
 }
 
-.carousel-control-next,
-.carousel-control-prev {
-    filter: invert(100%);
-}
-
 .carousel-inner {
     position: absolute;
     top: 25%;
@@ -90,6 +88,21 @@
     font-weight: 100;
     font-size: smaller;
     padding-top: 0;
+    color: #23BBBB;
+}
+
+.invert {
+    filter: invert(100%);
+}
+
+/* Location */
+
+.location-items {
+    list-style: none;
+}
+
+.note {
+    font-size: smaller;
 }
 
 /* Card */
@@ -99,6 +112,9 @@
     border-color: #23BBBB;
 }
 
+.close {
+    background-color: none;
+}
 
 /* Footer */
 

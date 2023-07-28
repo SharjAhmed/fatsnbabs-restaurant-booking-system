@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- My booking section -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col mt-5 ">
+        <div class="jumbotron jumbo-height">
+          <h1 class="display-4">My Bookings</h1>
+          <p>Here, you can find your bookings. If you need to make any changes to your booking, or delete your booking, please do this below.</p>
+          <hr class="my-4">
+          <!-- Displays all the reservations of the user-->
+          {% for reservation in reservations%}
+          <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-block text-left" type="button" data-toggle="collapse"
+                    data-target="#collapse{{ forloop.counter }}" aria-expanded="true" aria-controls="collapseOne">
+                    Reservation | Date: {{reservation.date | date:'d-m-Y' }}
+                    <i class="fas fa-caret-down"></i>
+                  </button>
+                </h2>
+              </div>
+              <div id="collapse{{ forloop.counter }}" class="collapse" aria-labelledby="headingOne"
+                data-parent="#accordionExample">
+                <div class="card-body">
+                  <p>Time: {{reservation.time}} | Number of people: {{reservation.table.number_of_seats}} | Id:
+                    {{ reservation.id }}</p>
+                  <a href="/edit_booking/{{ reservation.id }}" class="btn btn-secondary">Edit</a>
+
+                  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#staticBackdrop">
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Delete modal -->
+            <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+              aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Delete booking</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Are you sure you want to delete your reservation?
+                  </div>
+                  <div class="modal-footer">
+                    <a href="/delete_booking/{{ reservation.id }}" class="btn btn-danger">
+                      Delete
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% empty %}
+          <div class="row ">
+            <div class="col text-center pt-5">
+              <div class="card pt-5 pb-5">
+                <h2>No bookings</h2>
+                <p class="pt-3 pb-3">Want to book a table?</p>
+                <div>
+                  <a class="btn btn-info" href="{% url 'booking' %}">Booking</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{%endblock%}

@@ -41,14 +41,17 @@
                                 href="{% url 'index' %}">Home</a>
                         </li>
                         <li>
-                            <a href="{% url 'menus' %}" class="nav-link {% if request.path == '/' %}active{% endif %}">Menus</a>
+                            <a href="{% url 'menus' %}"
+                                class="nav-link {% if request.path == '/menus' %}active{% endif %}">Menus</a>
                         </li>
                         <li>
-                            <a href="{% url 'booking' %}" class="nav-link {% if request.path == '/' %}active{% endif %}">Book a Table</a>
+                            <a href="{% url 'booking' %}"
+                                class="nav-link {% if request.path == '/booking' %}active{% endif %}">Book a Table</a>
                         </li>
                         {% if user.is_authenticated %}
                         <li>
-                            <a href="#" class="nav-link {% if request.path == '/' %}active{% endif %}">Manage Your
+                            <a href="{% url 'mybookings' %}"
+                                class="nav-link {% if request.path == '/mybookings' %}active{% endif %}">My
                                 Bookings</a>
                         </li>
                         <li class="nav-item">
@@ -62,6 +65,9 @@
                             <a class="nav-link" href="{% url 'account_login' %}">Login</a>
                         </li>
                         {% endif %}
+                        <li>
+                            <a href="{% url 'location' %}" class="nav-link {% if request.path == '/location' %}active{% endif %}">Where To Find Us!</a>
+                        </li>
                     </ul>
                     <span class="blue-text">
                         A blend of South Asian cuisine with British Bakes.
@@ -69,8 +75,8 @@
                 </div>
             </div>
         </nav>
+        {% include 'messages.html' %}
         {% block content %}
-        <!-- Content Goes here -->
         {% endblock content %}
         <!-- Log out Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -104,9 +110,15 @@
         <footer class="footer mt-auto text-center pt-4 navbar-dark bg-dark">
             <p class="m-0 text-center blue-text">For more Sweets & Snacks</p>
             <p class="m-0 text-center text-white">Follow us:
-                <i class="fab fa-facebook-square ms-3"></i>
-                <i class="fab fa-twitter-square ms-3"></i>
-                <i class="fab fa-instagram-square ms-3"></i>
+                <a target="_blank" href="https://www.instagram.com/">
+                    <i class="fab fa-instagram-square ms-3" style="color: #23BBBB;"></i>
+                </a>
+                <a target="_blank" href="https://en-gb.facebook.com/">
+                    <i class="fab fa-facebook-square ms-3" style="color: #23BBBB;"></i>
+                </a>
+                <a target="_blank" href="https://twitter.com/">
+                    <i class="fab fa-twitter-square ms-3" style="color: #23BBBB;"></i>
+                </a>
             </p>
         </footer>
 

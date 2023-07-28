@@ -13,11 +13,14 @@ def index_view(request):
 def menu_view(request):
     return render(request, 'menus.html')
 
+def location_view(request):
+    return render(request, 'location.html')
+
 
 @login_required
 def add_reservation(request):
 
-     if request.method == 'POST':
+    if request.method == 'POST':
         form = ReservationForm(request.POST)
 
         if form.is_valid():
@@ -25,20 +28,20 @@ def add_reservation(request):
             reserv.client = request.user
             reserv.save()
             messages.success(
-                request, 'Reservation request submitted succesfully.'
+                request, 'Your reservation request has been submitted succesfully.'
                 )
         else:
-            messages.error(request, 'The table is already booked.')
+            messages.error(request, 'Sorry, that table has already been booked.')
             reserv = form.instance.date
 
-        form = ReservationForm()
-        context = {
-            'form': form,
-        }
-        return render(request, 'table_booking.html', context)
+    form = ReservationForm()
+    context = {
+        'form': form,
+    }
+    return render(request, 'table_booking.html', context)
 
 @login_required
-def manage_bookings(request):
+def mybookings_view(request):
     try:
         reservations = get_list_or_404(Reservation, client=request.user)
     except Exception:
@@ -48,7 +51,7 @@ def manage_bookings(request):
     context = {
         'reservations': reservations,
     }
-    return render(request, 'manage_bookings.html', context)
+    return render(request, 'mybookings.html', context)
 
 @login_required
 def edit_booking(request, reservation_id):
@@ -60,7 +63,7 @@ def edit_booking(request, reservation_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Thank you, your reservation has been updated succesfully.')
-            return redirect('manage_bookings')
+            return redirect('mybookings')
         else:
             messages.error(request, 'Sorry, that table has already been booked.')
 

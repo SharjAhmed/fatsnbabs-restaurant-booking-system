@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col mt-5 ">
+        <div class="jumbotron">
+
+          <h3 class="display-4">Edit your booking</h3>
+          <hr class="my-4">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card mt-4" style="width: 18rem;">
+                <div class="card-body card-height">
+                  <p class="card-text ">
+                    <!-- Form -->
+                    <form class='mt-5' method='post'>
+                      {% csrf_token %}
+                      {{ form.as_p }}
+                      <div>
+                        <p>
+                          <button type="submit" class="btn btn-dark">Edit Booking</button>
+                        </p>
+                      </div>
+                    </form>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%endblock%}
