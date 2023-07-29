@@ -21,7 +21,10 @@ DEBUG = True
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
-ALLOWED_HOSTS = ['fatsnbabs.herokuapp.com', 'fatsnbabs-216f47f1be28.herokuapp.com', '8000-sharjahmed-fatsnbabsres-ktnmfsno6zs.ws-eu102.gitpod.io']
+ALLOWED_HOSTS = [
+    'fatsnbabs.herokuapp.com', 
+    'fatsnbabs-216f47f1be28.herokuapp.com', 
+    '8000-sharjahmed-fatsnbabsres-k38okejnzog.ws-eu102.gitpod.io']
 
 
 # Application definition
@@ -54,7 +57,6 @@ MESSAGE_TAGS = {
         messages.WARNING: 'alert-warning',
         messages.ERROR: 'alert-danger',
 }
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

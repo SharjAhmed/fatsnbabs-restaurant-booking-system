@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
 #page-container {
     position: relative;
     min-height: 100vh;
 }
 
 #content-wrap {
-    padding-bottom: 6.5rem;
+    padding-bottom: 8.5rem;
 }
 
 .blue-text {
@@ -26,16 +32,35 @@ a {
 .navbar {
     padding: 2%;
     font-size: large;
+    justify-content: center;
+}
+
+.navbar-nav li {
+    text-align: center;
+}
+
+.tagline {
+    margin-bottom: 0;
 }
 
 /* Main Page */
 
+.row.background {
+    --bs-gutter-x: 0;
+}
+
 .background {
-    background: url(https://res.cloudinary.com/dhfp7asfd/image/upload/e_blur:100,o_48/v1690410296/desi_afternoon_tea_hgzfl8.webp);
+    background-image: url(https://res.cloudinary.com/dhfp7asfd/image/upload/e_blur:100,o_48/v1690410296/desi_afternoon_tea_hgzfl8.webp);
+    background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
     min-height: 47rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 100%;
+    color: #fff;
 }
 
 .snippet {
@@ -69,8 +94,9 @@ a {
 }
 
 .lunch-carousel {
-    top: -120px;
-    height: 30rem;
+    top: -145px;
+    height: 35rem;
+    color: #fff;
 }
 
 .carousel-inner {
@@ -80,19 +106,51 @@ a {
 
 /* Menus */
 
+.menu-box {
+    min-width: 80%;
+}
+
+.background-menu {
+    width: 100%;
+    background-image: url(https://res.cloudinary.com/dhfp7asfd/image/upload/v1690627748/desi-chai_nravas.webp);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.3);
+    min-height: 47rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    background-color: #000;
+    opacity: 0.6;
+    padding: 2%;
+}
+
+.menu-section {
+    background-color: #000;
+    opacity: 0.6;
+}
+
 .menu-items {
     font-weight: bolder;
+    font-size: 100%;
+    color: #fff
 }
 
 .sub-list {
-    font-weight: 100;
     font-size: smaller;
     padding-top: 0;
     color: #23BBBB;
 }
 
-.invert {
-    filter: invert(100%);
+/* Booking */
+
+.booking-form {
+    width: 18rem;
 }
 
 /* Location */
@@ -103,6 +161,11 @@ a {
 
 .note {
     font-size: smaller;
+}
+
+.location {
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 /* Card */
@@ -119,8 +182,40 @@ a {
 /* Footer */
 
 .footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
-    height: 6.5rem;
+    height: 9rem;
+}
+
+/*--------Media queires-------------*/
+
+/*--------Menu-------------*/
+@media screen and (max-width: 992px) {
+
+    .navbar-nav {
+        text-align: center;
+        padding-bottom: 2%;
+    }
+
+    .tagline {
+        text-align: center;
+    }
+
+    .menu-title {
+        font-size: x-large;
+    }
+
+    .menu-subtitle {
+        font-size: inherit;
+    }
+
+    .carousel-menu {
+        height: 425px;
+        width: 90%;
+    }
+
+    .carousel-position {
+        width: 95%;
+    }
 }

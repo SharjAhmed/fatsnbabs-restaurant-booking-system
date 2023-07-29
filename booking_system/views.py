@@ -6,7 +6,6 @@ from .forms import ReservationForm
 from django.contrib import messages
 from datetime import date
 
-
 def index_view(request):
     return render(request, 'index.html')
 

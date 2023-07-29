@@ -8,9 +8,9 @@
     <div class="row">
       <div class="col mt-5 ">
         <div class="jumbotron jumbo-height">
-          <h1 class="display-4">My Bookings</h1>
+          <h1 class="display-4"> <span class="blue-text">My </span>Bookings</h1>
           <p>Here, you can find your bookings. If you need to make any changes to your booking, or delete your booking, please do this below.</p>
-          <hr class="my-4">
+          <hr class="my-4 blue-text">
           <!-- Displays all the reservations of the user-->
           {% for reservation in reservations%}
           <div class="accordion" id="accordionExample">
@@ -64,10 +64,10 @@
           <div class="row ">
             <div class="col text-center pt-5">
               <div class="card pt-5 pb-5">
-                <h2>No bookings</h2>
+                <h2>No Bookings</h2>
                 <p class="pt-3 pb-3">Want to book a table?</p>
                 <div>
-                  <a class="btn btn-info" href="{% url 'booking' %}">Booking</a>
+                  <a class="btn btn-info btn-blue" href="{% url 'booking' %}">Booking</a>
                 </div>
               </div>
             </div>

@@ -15,12 +15,12 @@
         </div>
     </div>
 </section>
-
 <section class="carousel-items">
     <div id="carouselExampleIndicators" class="carousel slide bg-dark text-center text-white" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -45,6 +45,13 @@
                 <br>
                 <a class="btn btn-blue" href="{% url 'account_login' %}">Login</a>
                 {% endif %}
+            </div>
+            <div class="carousel-item">
+                <h3><i class="fa-solid fa-map-location-dot fa-bounce" style="color: #23bbbb;"></i> Where To Find Us!</h3>
+                <br>
+                <p>Come and pay us a visit!</p>
+                <br>
+                <a class="btn btn-blue" href="{% url 'location' %}">Where To Find Us</a>
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
