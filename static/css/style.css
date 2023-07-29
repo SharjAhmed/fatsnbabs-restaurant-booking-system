@@ -186,6 +186,7 @@ a {
     bottom: 0;
     width: 100%;
     height: 9rem;
+    z-index: 99;
 }
 
 /*--------Media queires-------------*/
@@ -200,6 +201,11 @@ a {
 
     .tagline {
         text-align: center;
+    }
+
+    .snippet {
+        font-size: 200%;
+        width: 60%;
     }
 
     .menu-title {
