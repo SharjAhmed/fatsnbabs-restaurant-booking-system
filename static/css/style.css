@@ -85,7 +85,7 @@ a {
 
 .carousel {
     height: 22rem;
-    top: 25%;
+    top: 30%;
     width: 90%;
     max-width: 40rem;
     margin: auto;
@@ -111,13 +111,13 @@ a {
 }
 
 .background-menu {
-    width: 100%;
+    max-width: 100%;
     background-image: url(https://res.cloudinary.com/dhfp7asfd/image/upload/v1690627748/desi-chai_nravas.webp);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
     background-color: rgba(255, 255, 255, 0.3);
-    min-height: 47rem;
+    min-height: 50rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -185,7 +185,7 @@ a {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 9rem;
+    height: 6rem;
     z-index: 99;
 }
 
@@ -208,12 +208,34 @@ a {
         width: 60%;
     }
 
+    .carousel-items {
+        height: 31rem;
+        margin-top: -7rem;
+    }
+
+    .background-menu{
+        min-height: 61rem;
+        max-width: 100%;
+    }
+
     .menu-title {
         font-size: x-large;
     }
 
     .menu-subtitle {
         font-size: inherit;
+    }
+
+    #lunch-menu {
+        height: 38rem;
+    }
+
+    #panini p {
+        margin-top: 3rem;
+    }
+
+    #salad p {
+        margin-top: 3rem;
     }
 
     .carousel-menu {
