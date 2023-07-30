@@ -6,8 +6,8 @@ The live site can be found here [Fats n Babs](https://fatsnbabs-216f47f1be28.her
 
 Fats n Babs is a local cafe & restaurant which serves a variety of Pakistani and British food.
 
-This site is designed to facilitate the process of making reservations and managing bookings at the restaurant. It streamlines the reservation process for users, improving efficiency and user experience. 
-The booking system provides an easy-to-use interface for users to make reservations. users can select the date, time, and party size for their reservation. The system checks the restaurant's availability for the specified date and time. If there is a table available, the user receives an immediate confirmation.
+This site is designed to facilitate the process of making booking and managing bookings at the restaurant. It streamlines the booking process for users, improving efficiency and user experience. 
+The booking system provides an easy-to-use interface for users to make booking. users can select the date, time, and party size for their booking. The system checks the restaurant's availability for the specified date and time. If there is a table available, the user receives an immediate confirmation.
 Users are able to manage their bookings once they are logged in to amend the date, time or number of seats. They are also able to delete their bookings.
 
 ## CONTENTS
@@ -83,7 +83,7 @@ I then moved onto the next set of tasks and followed the same steps until all th
 
 # Design
 
-## Colour Scheme#
+## Colour Scheme
 
 ![Colour Palette](/media/images/fatsnbabs-palette.png)
 
@@ -273,12 +273,12 @@ Sign Out:
 Two models were created for this project:
 
 ### Table:
-  - To handle the tables in tbe restaurant - so users can choose how many people the booking is for and so the system can check to make sure no double booking occurs.
+  - To handle the tables in the restaurant - so users can choose how many people the booking is for and so the system can check to make sure no double booking occurs.
 
 ### Reservation:
   - To handle the booking process - defines the 4 key factors when a user requests a booking:
     * Client (User)
-    * Table
+    * Table - taken from Table model
     * Date
     * Time
 
@@ -293,10 +293,10 @@ Two models were created for this project:
 
 ## Frameworks, Libraries & Programs Used:
 * Bootstrap - The framework for the website. Code for the navbar, carousel, cards and form were used and modified. Additional CSS styling was also implemented in style.css.
-* Cloudinary - Used to host background images.
+* Cloudinary - Used to host background images for the homepage and menu page.
 * Django (inlcuding Allauth) - django framework used to build the site. Allauth used for login/sign up/sign out functions.
-* ElephantSQL - Database management.
-* Font Awesome - Icons used in the site.
+* ElephantSQL - Database management site used.
+* Font Awesome - Icons used for this project.
 * Git - GitHub & GitPod used for workspace management.
 * Google Fonts - Used for the fonts on the site.
 * Heroku - Used for deployment.
@@ -388,7 +388,7 @@ I used the [PEP8 Python Linter](https://pep8ci.herokuapp.com/) to check my Pytho
 
 ### TDD
 
-Some automated testing was used on the form. 
+Some automated testing was used on the form. These can be found in test_form.py
 
 ### Manual Testing
 
@@ -428,7 +428,7 @@ Carrousel | The links in the carousel are functional and take the user to the co
 | Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS |
 | Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS |
 | Form | Checked the form submits only when all required fields are filled out. | PASS |
-| Date | When the calendar is clicked, it is loaded quicklly and smoothly and is responsive. | PASS |
+| Date | When the calendar is clicked, it is loaded quickly and smoothly and is responsive. | PASS |
 | Time | The Time dropdown correctly shows the times selection from the model | PASS |
 
 ![Lighthouse Booking](/media/lighthouse/lighthouse-booking.png)
@@ -437,11 +437,11 @@ Carrousel | The links in the carousel are functional and take the user to the co
 | TEST | OUTCOME |PASS / FAIL |
 | :--- | :--- | :--- |
 | Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS |
-| Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS |
-| Dropdown | Clicking on a reservation activates the dropdown, showing the edit and delete buttons. | PASS |
+| Accessibility |The accessibility of the page has been checked using Lighthouse. | PASS |
+| Dropdown | Clicking on a booking activates the dropdown, showing the edit and delete buttons. | PASS |
 | Edit |Clicking on the edit button takes you to the edit page. | PASS |
 | Delete |When the delete button is clicked, a modal appears to confirm the action before it is executed. | PASS |
-| No reservation |A button linking to the Book a Table page is present and functional.| PASS |
+| No booking |A button linking to the Book a Table page is present and functional.| PASS |
 
 ![Lighthouse Manage](/media/lighthouse/lighthouse-mybookings.png)
 
@@ -498,12 +498,19 @@ Carrousel | The links in the carousel are functional and take the user to the co
     * Error message was stating "Not Found: /static/css/styles.css" 
     * After troubleshooting and Googling I found this [Slack thread](https://code-institute-room.slack.com/archives/C026PTF46F5/p1688850855667969)- I installed Whitenoise which resolved the issue
 
+* | Accessibility on My Bookings page was low due to id being used twice.
+    * Issue resolved. Removed id from one of the divs
+
+ 
+
 * Book a Table form was not submitting.
     * Human error - closing form tag had been deleted.
 
 ### Unfixed Bugs
 
-No outstanding bugs.
+* Lunch menu on mobile device is longer than I wanted.
+    * Attempted to fix, but it pushed all other items on screen away.
+    * Kept as is, as the menu is still readable and easy to navigate - just a cosmetic issue.
 
 # Credits
 
@@ -513,5 +520,10 @@ No outstanding bugs.
 * CI Module [I Think Therefore I Blog](https://github.com/Code-Institute-Solutions/Django3blog/tree/master/12_final_deployment) for really helping me understand models in django.
 * [Geeks for Geeks](https://www.geeksforgeeks.org/form-as_p-render-django-forms-as-paragraph/) used when researching how to create a form from a django model.
 * https://www.youtube.com/watch?v=gpTrmDpadZY - to help me understand email notifications through Django - did not end up using.
-* As always - my mentor, Jubril Akolade, for all his help and patience in helping me with this project.
 * Tutor Support - for clearing up some points to do with the assesment criteria.
+* My wife for the menu and restaurant idea.
+
+## Media Used
+
+* https://timesofindia.indiatimes.com/life-style/food-news/how-to-make-masala-chai-at-home/articleshow/69027092.cms for Menu Background
+* https://lovelaughmirch.com/indian-afternoon-tea-menu-ideas-recipes/ for Homepage Background
