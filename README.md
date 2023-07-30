@@ -37,10 +37,6 @@ Users are able to manage their bookings once they are logged in to amend the dat
   - [Bugs](#bugs)
 
 - [Credits](#credits)
-  - [Code Used](#code-used)
-  - [Content](#content)
-  - [Media](#media)
-  - [Acknowledgments](#acknowledgments)
 
 
 # User experience
@@ -248,24 +244,24 @@ Underneath the map is some information on the restaurant's opening & closing tim
 
 Sign Up:
 
-- The sign up form is a simple form that requires the user to enter a username, an optional email address and a password.
-- The user must re-enter the password for confirmation and it must match the original password entered.
+- The sign up form is a simple form that requires the user to enter a username, an optional email address and a PASS |word.
+- The user must re-enter the PASS |word for confirmation and it must match the original PASS |word entered.
 - There is a message to remind users that if they already have an account, they can click the sign in link to be directed to the sign in page.
 - If the user enters an username that is already registered, an error message will appear.
-- If the user enters a password that is not secure, they will be prompted with a message to create a stronger password.
-- The sign up form verifies that both passwords entered match. If the user enters passwords that do not match, an error message will appear to notify them.
+- If the user enters a PASS |word that is not secure, they will be prompted with a message to create a stronger PASS |word.
+- The sign up form verifies that both PASS |words entered match. If the user enters PASS |words that do not match, an error message will appear to notify them.
 
 ![Sign Up](/media/images/signup.png)
 
 Login:
 
-- The login form requires users to enter their username and the password that they used when they signed up.
+- The login form requires users to enter their username and the PASS |word that they used when they signed up.
 - There is a message to remind users that if they haven't created an account, they can click the sign up link to be directed to the sign up page.
 - If the user enters the wrong credentials, an error message will be displayed to inform them.
 
 ![Login](/media/images/login.png)
 
-Sign out:
+Sign Out:
 
 - When the user clicks the sign out button from the navbar, a modal will appear to confirm the action before the user is signed out.
 
@@ -296,7 +292,7 @@ Two models were created for this project:
 * Python
 
 ## Frameworks, Libraries & Programs Used:
-* Bootstrap - The framework for the website. Code for the navigation bar, carousel, cards and form were used and modified. Additional CSS styling was also implemented in style.css.
+* Bootstrap - The framework for the website. Code for the navbar, carousel, cards and form were used and modified. Additional CSS styling was also implemented in style.css.
 * Cloudinary - Used to host background images.
 * Django (inlcuding Allauth) - django framework used to build the site. Allauth used for login/sign up/sign out functions.
 * ElephantSQL - Database management.
@@ -370,6 +366,152 @@ Two models were created for this project:
 
 ### HTML:
 
-I used 
+I used the [W3C Markup Validator](https://validator.w3.org/#validate_by_input). All errors found have now been resolved:
+
+![W3C Error](/media/images/w3c.png)
+![W3C Error 2](/media/images/w3c2.png)
+
+### CSS:
+
+The [W3C CSS Validation Service - Jigsaw](https://jigsaw.w3.org/css-validator/#validate_by_input) was used to check my CSS.
+No Errors or warnings were found:
+
+![W3C CSS](/media/images/w3c-css.png)
+
+### Python
+
+I used the [PEP8 Python Linter](https://pep8ci.herokuapp.com/) to check my Python. No errors apart from "line too long"
+
+![PEP8](/media/images/pep8.png)
+![PEP8](/media/images/pep8-1.png)
+![PEP8](/media/images/pep8-2.png)
+
+### TDD
+
+Some automated testing was used on the form. 
+
+### Manual Testing
+
+#### All Pages:
+| TEST | OUTCOME |PASS / FAIL |
+| :--- | :--- | :--- |
+Home page | When the "home" button in the navbar is clicked, the browser redirects the user to the home page and the "active" styling appears on the home button | PASS |
+Navbar |When a page link in the navbar is clicked, the browser redirects the user to the relevant page and the "active" styling appears on the page link. | PASS |
+Book a Table | When the "Book a Table" link in the navbar is clicked, the browser redirects the user to the Book a Table page and the "active" styling appears on the page link.| PASS |
+Login  /Sign Up | When the user is not logged in, the navbar shows "Sign Up" & "Login" rather than "My Bookings". When the "Sign Up" or "Login" links are clicked, the browser redirects the user to the relevant page and the "active" styling appears on the page link.| PASS |
+My Bookings | When the "My Bookings" link in the navbar is clicked, the browser redirects the user to the My Bookings page and the "active" styling appears on the page link. This page only shows when the user is logged in. | PASS |
+Where To Find Us page | When the "Where to Find Us" link in the carousel is clicked, the browser redirects the user to the "Where to Find Us" page and the map loads correctly. | PASS |
+Foreground & background colour | Checked foreground information is not distracted by background color or images | PASS |
+Text | Checked that all fonts and colours used are consistent. | PASS |
+
+#### Footer
+| TEST | OUTCOME |PASS / FAIL |
+| :--- | :--- | :--- |
+Where To Find Us page | When the "Where to Find Us" link in the footer is clicked, the browser redirects the user to the "Where to Find Us" page and the map loads correctly. | PASS |
+Facebook | When the Facebook icon is clicked, a new tab will open and the user will be redirected to the Facebook website. | PASS |
+Twitter | When the Twitter icon is clicked, a new tab will open and the user will be redirected to the Twitter website. | PASS |
+Instagram | When the Instagram icon is clicked, a new tab will open and the user will be redirected to the Instagram website. | PASS |
+
+#### Home
+| TEST | OUTCOME |PASS / FAIL |
+| :--- | :--- | :--- |
+| Background | All media assets are displayed correctly, without any pixelation or stretched images, and are responsive on all devices. | PASS |
+| Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views. | PASS |
+| Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS |
+Carrousel | The links in the carousel are functional and take the user to the correct pages. | PASS |
+
+![Lighthouse Home](/media/lighthouse/lighthouse-home.png)
+
+#### Book a Table
+| TEST | OUTCOME |PASS / FAIL |
+| :--- | :--- | :--- |
+| Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS |
+| Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS |
+| Form | Checked the form submits only when all required fields are filled out. | PASS |
+| Date | When the calendar is clicked, it is loaded quicklly and smoothly and is responsive. | PASS |
+| Time | The Time dropdown correctly shows the times selection from the model | PASS |
+
+![Lighthouse Booking](/media/lighthouse/lighthouse-booking.png)
+
+#### My Bookings page
+| TEST | OUTCOME |PASS / FAIL |
+| :--- | :--- | :--- |
+| Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS |
+| Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS |
+| Dropdown | Clicking on a reservation activates the dropdown, showing the edit and delete buttons. | PASS |
+| Edit |Clicking on the edit button takes you to the edit page. | PASS |
+| Delete |When the delete button is clicked, a modal appears to confirm the action before it is executed. | PASS |
+| No reservation |A button linking to the Book a Table page is present and functional.| PASS |
+
+![Lighthouse Manage](/media/lighthouse/lighthouse-mybookings.png)
+
+#### Edit Bookings page
+| TEST | OUTCOME |PASS / FAIL |
+| :--- | :--- | :--- |
+| Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS |
+| Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS |
+| Form | Checked the form submits only when all required fields are filled out. Submission of form updated the booking correctly. | PASS |
+
+![Lighthouse Edit](/media/lighthouse/lighthouse-edit.png)
+
+### Sign Up page
+| TEST | OUTCOME |PASS / FAIL |
+| :--- | :--- | :--- |
+| Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS |
+| Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS |
+| Register form | Checked the form submits only when all required fields are filled out. | PASS |
+| Sign In link | Checked the sign in link redirects to the sign in page. | PASS |
+
+![Lighthouse Sign Up](/media/lighthouse/lighthouse-signup.png)
+
+#### Login page
+| TEST | OUTCOME |PASS / FAIL |
+| :--- | :--- | :--- |
+| Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS |
+| Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS |
+| Sign in form | Checked the form submits only when all required fields are filled out. | PASS |
+| Sign Up link | Checked the sign up link redirects to the sign up page. | PASS |
+
+![Lighthouse Login](/media/lighthouse/lighthouse-login.png)
+
+#### Sign Out
+| TEST | OUTCOME |PASS / FAIL |
+| :--- | :--- | :--- |
+| When the Sign Out button in the navbar is clicked, the user is redirected to the Sign Out page | PASS |
+| When the Sign Out button on the Sign Out page is clicked, the user successfully signed out of their account | PASS |
+
+![Lighthouse Sign Out](/media/lighthouse/lighthouse-signout.png)
+
+#### Where To Find Us page
+| TEST | OUTCOME |PASS / FAIL |
+| :--- | :--- | :--- |
+| Map | The map asset is displayed correctly, without any pixelation or stretched images, and is responsive on all devices. | PASS |
+| Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS |
+| Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS |
+
+![Lighthouse Location](/media/lighthouse/lighthouse-location.png)
 
 ## Bugs
+
+### Fixed Bugs
+* Static files were not loading when deploying to Heroku.
+    * Error message was stating "Not Found: /static/css/styles.css" 
+    * After troubleshooting and Googling I found this [Slack thread](https://code-institute-room.slack.com/archives/C026PTF46F5/p1688850855667969)- I installed Whitenoise which resolved the issue
+
+* Book a Table form was not submitting.
+    * Human error - closing form tag had been deleted.
+
+### Unfixed Bugs
+
+No outstanding bugs.
+
+# Credits
+
+* The Slack Community - was regularly checked and issues often found to be resolved by someone there.
+* My fellow CI students for helping me understand the Python code for setting up models and views.
+* https://github.com/NDevox/django_restaurant_manager & https://github.com/andreagrandi/booking-example - when doing initial research into project
+* CI Module [I Think Therefore I Blog](https://github.com/Code-Institute-Solutions/Django3blog/tree/master/12_final_deployment) for really helping me understand models in django.
+* [Geeks for Geeks](https://www.geeksforgeeks.org/form-as_p-render-django-forms-as-paragraph/) used when researching how to create a form from a django model.
+* https://www.youtube.com/watch?v=gpTrmDpadZY - to help me understand email notifications through Django - did not end up using.
+* As always - my mentor, Jubril Akolade, for all his help and patience in helping me with this project.
+* Tutor Support - for clearing up some points to do with the assesment criteria.

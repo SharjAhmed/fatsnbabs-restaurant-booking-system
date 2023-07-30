@@ -4,7 +4,7 @@ import os
 import dj_database_url
 
 if os.path.isfile("env.py"):
-   import env
+    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,8 +22,8 @@ DEBUG = True
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 ALLOWED_HOSTS = [
-    'fatsnbabs.herokuapp.com', 
-    'fatsnbabs-216f47f1be28.herokuapp.com', 
+    'fatsnbabs.herokuapp.com',
+    'fatsnbabs-216f47f1be28.herokuapp.com',
     '8000-sharjahmed-fatsnbabsres-k38okejnzog.ws-eu102.gitpod.io']
 
 

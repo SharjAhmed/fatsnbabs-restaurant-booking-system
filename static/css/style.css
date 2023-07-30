@@ -159,6 +159,15 @@ a {
     border-style: dotted;
 }
 
+.salad-subtitle {
+    margin: 0;
+    padding: 0;
+}
+
+.salad-hr {
+    margin: 6.5px;
+}
+
 #halal {
     padding-top: 1%;
     font-size: larger;
@@ -197,10 +206,6 @@ iframe {
 .card-body {
     border-style: solid;
     border-color: #23BBBB;
-}
-
-.close {
-    background-color: none;
 }
 
 /* Footer */
