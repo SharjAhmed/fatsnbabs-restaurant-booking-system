@@ -437,10 +437,10 @@ Carrousel | The links in the carousel are functional and take the user to the co
 | TEST | OUTCOME |PASS / FAIL |
 | :--- | :--- | :--- |
 | Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS |
-| Accessibility |The accessibility of the page has been checked using Lighthouse. | PASS |
+| Accessibility | The accessibility of the page has been checked using Lighthouse. | PASS |
 | Dropdown | Clicking on a booking activates the dropdown, showing the edit and delete buttons. | PASS |
-| Edit |Clicking on the edit button takes you to the edit page. | PASS |
-| Delete |When the delete button is clicked, a modal appears to confirm the action before it is executed. | PASS |
+| Edit | Clicking on the edit button takes you to the edit page. | PASS |
+| Delete | When the delete button is clicked, a modal appears to confirm the action before it is executed. | PASS |
 | No booking |A button linking to the Book a Table page is present and functional.| PASS |
 
 ![Lighthouse Manage](/media/lighthouse/lighthouse-mybookings.png)
@@ -449,7 +449,7 @@ Carrousel | The links in the carousel are functional and take the user to the co
 | TEST | OUTCOME |PASS / FAIL |
 | :--- | :--- | :--- |
 | Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS |
-| Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS |
+| Accessibility | The accessibility of the page has been checked using Lighthouse.| PASS |
 | Form | Checked the form submits only when all required fields are filled out. Submission of form updated the booking correctly. | PASS |
 
 ![Lighthouse Edit](/media/lighthouse/lighthouse-edit.png)
@@ -469,7 +469,7 @@ Carrousel | The links in the carousel are functional and take the user to the co
 | :--- | :--- | :--- |
 | Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS |
 | Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS |
-| Sign in form | Checked the form submits only when all required fields are filled out. | PASS |
+| Sign In form | Checked the form submits only when all required fields are filled out. | PASS |
 | Sign Up link | Checked the sign up link redirects to the sign up page. | PASS |
 
 ![Lighthouse Login](/media/lighthouse/lighthouse-login.png)
@@ -477,8 +477,10 @@ Carrousel | The links in the carousel are functional and take the user to the co
 #### Sign Out
 | TEST | OUTCOME |PASS / FAIL |
 | :--- | :--- | :--- |
-| When the Sign Out button in the navbar is clicked, the user is redirected to the Sign Out page | PASS |
-| When the Sign Out button on the Sign Out page is clicked, the user successfully signed out of their account | PASS |
+| Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS |
+| Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS |
+| Sign Out Link | When the Sign Out button in the navbar is clicked, the user is redirected to the Sign Out page | PASS |
+| Sign Out form | When the Sign Out button on the Sign Out page is clicked, the user successfully signed out of their account | PASS |
 
 ![Lighthouse Sign Out](/media/lighthouse/lighthouse-signout.png)
 
@@ -500,8 +502,6 @@ Carrousel | The links in the carousel are functional and take the user to the co
 
 * | Accessibility on My Bookings page was low due to id being used twice.
     * Issue resolved. Removed id from one of the divs
-
- 
 
 * Book a Table form was not submitting.
     * Human error - closing form tag had been deleted.
