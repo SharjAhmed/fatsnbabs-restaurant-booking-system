@@ -173,6 +173,12 @@ a {
 
 /* Location */
 
+iframe {
+    border:0;
+    width: 80%; 
+    height: 450px;
+}
+
 .location-items {
     list-style: none;
 }
