@@ -30,7 +30,7 @@ def add_reservation(request):
             reserv.client = request.user
             reserv.save()
             messages.success(
-                request, 'Your booking request has been submitted succesfully.'
+                request, 'Your booking request has been submitted successfully.'
                 )
         else:
             messages.error(request, 'Sorry, that table has already been booked.')
@@ -65,7 +65,7 @@ def edit_booking(request, reservation_id):
         form = ReservationForm(request.POST, instance=reservation)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Your booking has been updated succesfully.')
+            messages.success(request, 'Your booking has been updated successfully.')
             return redirect('mybookings')
         else:
             messages.error(request, 'That table has already been booked.')

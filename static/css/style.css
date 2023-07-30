@@ -222,11 +222,13 @@ iframe {
     list-style: none;
     text-align: center;
     padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.social-networks > li {
-    display: inline;
-    padding: 0 1%;
+.social-networks p {
+    margin: 1rem;
 }
 
 
@@ -301,7 +303,7 @@ iframe {
     }
 
     .lunch-control {
-        bottom: 29rem;
+        bottom: 26rem;
     }
 
     .menu-subtitle {
