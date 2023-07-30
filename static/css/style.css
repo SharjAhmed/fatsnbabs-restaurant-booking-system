@@ -204,8 +204,20 @@ a {
     bottom: 0;
     width: 100%;
     height: 6rem;
-    z-index: 99;
 }
+
+.social-networks {
+    color: #23BBBB;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.social-networks > li {
+    display: inline;
+    padding: 0 1%;
+}
+
 
 /*--------Media queires-------------*/
 
