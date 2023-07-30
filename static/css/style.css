@@ -238,13 +238,17 @@ a {
         color: #fff;
         height: 1.5rem;
         margin: 0;
-        width: 40rem;
+        width: -webkit-fill-available;
         text-align: center;
     }
 
     .background-menu{
         min-height: 61rem;
         max-width: 100%;
+    }
+
+    .menu-box {
+        width: -webkit-fill-available;
     }
 
     .menu-title {
@@ -264,7 +268,8 @@ a {
     }
 
     #salad p {
-        margin-top: 3rem;
+        margin: 3px;
+        width: 100%;
     }
 
     .lunch-carousel {
@@ -284,7 +289,14 @@ a {
 
     #salad p {
         margin: 3px;
-        width: 10rem;
+        width: 100%;
+    }
+
+    .key {
+        bottom: 5.3rem;
+        font-size: small;
+        color: #000;
+        border-style: dotted;
     }
 
     .carousel-menu {
