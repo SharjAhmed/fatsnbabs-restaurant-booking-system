@@ -95,13 +95,17 @@ a {
 
 .lunch-carousel {
     top: -145px;
-    height: 35rem;
+    height: 45rem;
     color: #fff;
 }
 
 .carousel-inner {
     position: absolute;
     top: 25%;
+}
+
+.lunch-control {
+    bottom: 21rem;
 }
 
 /* Menus */
@@ -116,7 +120,6 @@ a {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    background-color: rgba(255, 255, 255, 0.3);
     min-height: 50rem;
     display: flex;
     flex-direction: column;
@@ -126,13 +129,8 @@ a {
 
 .menu {
     background-color: #000;
-    opacity: 0.6;
+    opacity: 0.8;
     padding: 2%;
-}
-
-.menu-section {
-    background-color: #000;
-    opacity: 0.6;
 }
 
 .menu-items {
@@ -141,10 +139,30 @@ a {
     color: #fff
 }
 
+.menu-subtitle {
+    padding-bottom: 1rem;
+}
+
 .sub-list {
     font-size: smaller;
     padding-top: 0;
     color: #23BBBB;
+    list-style: none;
+}
+
+.key {
+    bottom: 211px;
+    position: absolute;
+    font-size: 100%;
+    color: #fff;
+    padding: 0.5%;
+    border-style: dotted;
+}
+
+#halal {
+    padding-top: 1%;
+    font-size: larger;
+    font-weight: 900;
 }
 
 /* Booking */
@@ -213,6 +231,17 @@ a {
         margin-top: -7rem;
     }
 
+    #halal {
+        font-size: small;
+        background-color: #000;
+        opacity: 0.8;
+        color: #fff;
+        height: 1.5rem;
+        margin: 0;
+        width: 40rem;
+        text-align: center;
+    }
+
     .background-menu{
         min-height: 61rem;
         max-width: 100%;
@@ -226,8 +255,8 @@ a {
         font-size: inherit;
     }
 
-    #lunch-menu {
-        height: 38rem;
+    .menu-items p {
+        font-size: small;
     }
 
     #panini p {
@@ -236,6 +265,26 @@ a {
 
     #salad p {
         margin-top: 3rem;
+    }
+
+    .lunch-carousel {
+        top: -242px;
+        height: 60rem;
+    }
+
+    .lunch-control {
+        bottom: 29rem;
+    }
+
+    .menu-subtitle {
+        font-size: inherit;
+        margin: 0;
+        padding: 0;
+    }
+
+    #salad p {
+        margin: 3px;
+        width: 10rem;
     }
 
     .carousel-menu {

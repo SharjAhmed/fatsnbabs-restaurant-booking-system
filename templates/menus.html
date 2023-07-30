@@ -3,33 +3,38 @@
 {% block content %}
 
 <div class="container background-menu">
+    <p id="halal">حلال - All our menu is halal</p>
     <div class="row text-center menu-box">
         <div id="brunch-menu" class="col-sm menu">
             <h1 class="blue-text  menu-title">Brunch</h1>
             <hr class="blue-text">
             <hr class="blue-text">
             <span class="menu-items">
-                <p>All Breakfast Plate</p>
+                <p>All Breakfast Platter - £14.95</p>
                 <p class="sub-list">Includes:</p>
                 <br>
                 <p>Chana Puri <i class="fa-solid fa-leaf fa-2xs" style="color: #27ae60;"></i></p>
                 <br>
-                <p>Eggs Benedict</p>
+                <p>Eggs Benedict <i class="fa-solid fa-leaf fa-2xs" style="color: #27ae60;"></i></p>
                 <br>
-                <p>Halwa</p>
+                <p>Halwa <i class="fa-solid fa-leaf fa-2xs" style="color: #27ae60;"></i></p>
                 <br>
-                <p>Pancakes</p>
+                <p>Pancakes <i class="fa-solid fa-leaf fa-2xs" style="color: #27ae60;"></i></p>
                 <p class="sub-list">Chocolate</p>
                 <p class="sub-list">Bananas | Blueberries | Strawberries</p>
                 <p class="sub-list">Honey</p>
                 <p class="sub-list">Lemon & Sugar</p>
+                <br>
+                <hr class="blue-text">
+                <p class="sub-list">Served with a choice of Tea or Coffee</p>
             </span>
         </div>
         <div id="lunch-menu" class="col-sm menu">
             <h1 class="blue-text menu-title">Lunch</h1>
             <hr class="blue-text">
             <hr class="blue-text">
-            <div id="carouselExampleIndicators" data-interval="false" class="carousel lunch-carousel slide" data-ride="carousel">
+            <div id="carouselExampleIndicators" data-interval="false" class="carousel lunch-carousel slide"
+                data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -40,46 +45,66 @@
                         <h3 class="blue-text menu-subtitle">Lunch Bites</h3>
                         <hr class="blue-text">
                         <span class="menu-items">
-                            <p>Chicken Pakoras</p>
+                            <p>Chicken Pakoras (4) - £5.95</p>
                             <br>
-                            <p>Kebab Rolls</p>
+                            <p>Kebab Rolls (2) - £6.95</p>
                             <br>
-                            <p>Samosa</p>
-                            <p class="sub-list">Meat</p>
-                            <p class="sub-list">Vegetable</p>
+                            <p>Samosa (2)</p>
+                            <p class="sub-list">Meat - £4.95</p>
+                            <p class="sub-list">Vegetable - £3.95 <i class="fa-solid fa-leaf fa-2xs"
+                                    style="color: #27ae60;"></i></p>
                             <br>
-                            <p>Vegetable Samosa Chaat <i class="fa-solid fa-leaf fa-2xs" style="color: #27ae60;"></i>
+                            <p>Vegetable Samosa Chaat - £5.95<i class="fa-solid fa-leaf fa-2xs"
+                                    style="color: #27ae60;"></i>
                             </p>
+                            <p class="sub-list">2 crunchy samosas served with spicy chickpea curry, yogurt and various
+                                tangy chutneys</p>
                         </span>
                     </div>
                     <div class="carousel-item">
                         <h3 class="blue-text menu-subtitle">Paninis</h3>
                         <hr class="blue-text">
                         <span id="panini" class="menu-items">
-                            <p>Tandoori Chicken</p>
+                            <p>Tandoori Chicken - £9.95</p>
                             <br>
-                            <p>Three Cheese</p>
+                            <p>Three Cheese - £8.95 <i class="fa-solid fa-leaf fa-2xs" style="color: #27ae60;"></i></p>
                             <br>
-                            <p>Tuna Melt</p>
+                            <p>Tuna Melt - £9.95</p>
+                            <br>
+                            <hr class="blue-text">
+                            <p class="sub-list">All Served with Salad & Chips</p>
                         </span>
                     </div>
                     <div class="carousel-item">
                         <h3 class="blue-text menu-subtitle">Salads</h3>
+                        <br>
                         <hr class="blue-text">
                         <span id="salad" class="menu-items">
-                            <p>Chicken Quinoa Salad</p>
+                            <p>Chicken Quinoa Salad - £13.95</p>
+                            <p class="sub-list">Chicken, hearty quinoa, velvety black beans, crunchy celery, spring
+                                onions and avocado are tossed in a bowl with a creamy, healthy salad dressing made with
+                                plain yoghurt.</p>
                             <br>
-                            <p>Mango Salad <i class="fa-solid fa-leaf fa-2xs" style="color: #27ae60;"></i></p>
+                            <p>Mango Salad - £11.95 <i class="fa-solid fa-leaf fa-2xs" style="color: #27ae60;"></i></p>
+                            <p class="sub-list">Mango salad is a fresh, fruity summertime salad loaded with
+                                nutrient-dense foods - starring a kale base, topped with a light oil-free lime dressing.
+                            </p>
                             <br>
-                            <p>Olive & Feta Salad</p>
+                            <p>Olive & Feta Salad £10.95 <i class="fa-solid fa-leaf fa-2xs" style="color: #27ae60;"></i>
+                            <p class="sub-list">A traditional Greek salad consists of sliced cucumbers, tomatoes, green
+                                bell pepper, red onion, olives, and feta cheese. With a handful of mint leaves for a
+                                fresh finishing touch.</p>
+                            </p>
                         </span>
                     </div>
                 </div>
-                <a class="carousel-control-prev invert" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <a class="carousel-control-prev invert lunch-control" href="#carouselExampleIndicators" role="button"
+                    data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
-                <a class="carousel-control-next invert" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <a class="carousel-control-next invert lunch-control" href="#carouselExampleIndicators" role="button"
+                    data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
@@ -89,18 +114,39 @@
             <h1 class="blue-text  menu-title">Afternoon Tea</h1>
             <hr class="blue-text">
             <hr class="blue-text">
+            <p class="sub-list">Afternoon Tea for 2 - £25</p>
+            <p class="sub-list">Afternoon Tea for 4 - £45</p>
             <span class="menu-items">
-                <p>British Cream Tea</p>
-                <p class="sub-list">or</p>
-                <p>Desi Chai</p>
-                <br>
-                <p>A Selection of Scrumptious Savouries</p>
-                <br>
+                <p>British Cream Tea <span class="blue-text">or</span> Desi Chai</p>
+                <hr class="blue-text">
+                <p class="sub-list">with</p>
+                <hr class="blue-text">
+                <p>Scrumptious Savouries</p>
+                <ul class="sub-list">A Selection of Sandwiches:
+                    <li class="sub-list">Egg & Watercress <i class="fa-solid fa-leaf fa-2xs"
+                            style="color: #27ae60;"></i></li>
+                    <li class="sub-list">Pickle & Mature Chedder <i class="fa-solid fa-leaf fa-2xs"
+                            style="color: #27ae60;"></i></li>
+                    <li class="sub-list">Salmon & Cream Cheese</li>
+                </ul>
+                <p class="sub-list">Gol Gappay w/ Tamarind Sauce <i class="fa-solid fa-leaf fa-2xs"
+                        style="color: #27ae60;"></i></p>
+                <p class="sub-list">Mini Pakoras & Samosas <i class="fa-solid fa-leaf fa-2xs"
+                        style="color: #27ae60;"></i></p>
+                <p class="sub-list">Tandoori Chicken Quiche</p>
+                <hr class="blue-text">
+                <p class="sub-list">and</p>
+                <hr class="blue-text">
                 <p>A Delicate Array of Desserts</p>
-                <p class="sub-list">Inspired by Pakistani and British Menus</p>
+                <p class="sub-list">Freshly Baked Scones w/ Clotted Cream & Strawberry Jam <i class="fa-solid fa-leaf"
+                        style="color: #27ae60;"></i></p>
+                <p class="sub-list">Gulab Jaman Cheesecake <i class="fa-solid fa-leaf" style="color: #27ae60;"></i></p>
+                <p class="sub-list">Saffron Milk Cake <i class="fa-solid fa-leaf" style="color: #27ae60;"></i></p>
+                <p class="sub-list">Summer Fruits Trifle <i class="fa-solid fa-leaf" style="color: #27ae60;"></i></p>
             </span>
         </div>
     </div>
+    <p class="key"><i class="fa-solid fa-leaf" style="color: #27ae60;"></i> Vegetarian</p>
 </div>
 
 {% endblock %}
